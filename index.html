@@ -1,0 +1,1846 @@
+
+
+<!DOCTYPE html>
+<!*****************For MSL Update: 2024/09/18********************>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="icon" type="image/png" href="https://msl.livedoor.biz/tools/helpmsl/icon4.png" />
+<style>
+
+button:hover {
+  cursor: pointer;
+}
+
+.link:link, a:visited {
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  border:1px solid;
+  border-radius: 4px;  
+  display: inline-block;
+}
+
+.link:hover, .link:active {
+  
+  background-color: lavender;
+}
+
+
+.headlan {
+  background-color: limegreen;
+  text-align: left;
+  width:370px;
+  height:40px;
+  font-size:30px;
+  border-color:black;
+  border-width: 2px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  box-shadow: grey 3px 3px 10px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: tahoma;
+
+}
+.box {
+  background-color: white;
+  height:165px;
+  width: 360px;
+  box-shadow:grey 3px 3px 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-family:tahoma;
+  font-size: 12px;
+
+}
+.box2{
+  background-color: white;
+  height:95px;
+  width: 360px;
+  box-shadow:grey 3px 3px 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-family:tahoma;
+  font-size: 12px;
+}
+
+.square_btn {
+    position: relative;
+    display: inline-block;
+    padding: 1.5px 1.5px;
+    text-decoration: none;
+    color: white;
+    background: orange;
+    /*border-bottom: solid 2px darkgray;*/
+    border-radius: 4px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    font-family:tahoma;
+}
+
+.square_btn:active {
+    border-bottom: solid 2px gray;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+    font-family:tahoma;
+}
+
+.setting {
+  padding: 0;
+  border: none;
+  background-color:white;
+}
+
+input,select {
+border-radius: 5px;
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+function beta_list(){
+
+switch (combo2.selectedIndex) {
+case 0: b="/line"; break;
+case 1: b="/creators"; break;
+case 2: b="/usersticker"; break;
+case 3: b="/LINEMusic"; break;
+case 4: b="/LINE_LIVE"; break;
+case 5: b="/LINELIVE"; break;
+case 6: b="/linepoints"; break;
+case 7: b="/webstore"; break;
+case 8: b="/business_id"; break;
+case 9: b="/line_at_application"; break;
+case 10: b="/line_at_id"; break;
+case 11: b="/line_reserve_management"; break;
+case 12: b="/line_at_th"; break;
+case 13: b="/official_account"; break;
+case 14: b="/official_account_jp"; break;
+case 15: b="/official_account_tw"; break;
+case 16: b="/official_account_th"; break;
+case 17: b="/official_account_id"; break;
+case 18: b="/admanager"; break;
+case 19: b="/admanager_tw"; break;
+case 20: b="/admanager_th"; break;
+case 21: b="/linemanga"; break;
+case 22: b="/lbdmanga"; break;
+case 23: b="/LINKME"; break;
+case 24: b="/B612"; break;
+case 25: b="/looks"; break;
+case 26: b="/coupon_book"; break;
+case 27: b="/line_notify"; break;
+case 28: b="/linecamera2"; break;
+case 29: b="/line_antivirus"; break;
+case 30: b="/Foodie"; break;
+case 31: b="/FoodieChina"; break;
+case 32: b="/BitBox"; break;
+case 33: b="/BitMax"; break;
+case 34: b="/LINEBlockchainWallet"; break;
+case 35: b="/BITMAX_Wallet"; break;
+case 36: b="/DCONNECT"; break;
+case 37: b="/line_list"; break;
+case 38: b="/TRIVIAGO"; break;
+case 39: b="/linepay_jp"; break;
+case 40: b="/GlobalNFTWallet"; break;
+case 41: b="/DosiBrandStore"; break;
+case 42: b="/DOSI_Citizen";break;
+case 43: b="/linemusic_for_artists";break;
+
+
+
+
+}
+      }
+
+function real_list(){
+
+ switch (combo2real.selectedIndex) {
+case 0: b1="/line"; break;
+case 1: b1="/creators"; break;
+case 2: b1="/usersticker"; break;
+case 3: b1="/LINEMusic"; break;
+case 4: b1="/card"; break;
+case 5: b1="/LINE_LIVE"; break;
+case 6: b1="/LINELIVE"; break;
+case 7: b1="/linepoints"; break;
+case 8: b1="/webstore"; break;
+case 9: b1="/business_id"; break;
+case 10: b1="/line_at_application"; break;
+case 11: b1="/line_at_id"; break;
+case 12: b1="/line_reserve_management"; break;
+case 13: b1="/line_at_th"; break;
+case 14: b1="/official_account"; break;
+case 15: b1="/official_account_jp"; break;
+case 16: b1="/official_account_tw"; break;
+case 17: b1="/official_account_th"; break;
+case 18: b1="/official_account_id"; break;
+case 19: b1="/admanager"; break;
+case 20: b1="/admanager_tw"; break;
+case 21: b1="/admanager_th"; break;
+case 22: b1="/linemanga"; break;
+case 23: b1="/lbdmanga"; break;
+case 24: b1="/link_me"; break;
+case 25: b1="/B612"; break;
+case 26: b1="/looks"; break;
+case 27: b1="/coupon_book"; break;
+case 28: b1="/line_notify"; break;
+case 29: b1="/linecamera2"; break;
+case 30: b1="/line_antivirus"; break;
+case 31: b1="/Foodie"; break;
+case 32: b1="/FoodieChina"; break;
+case 33: b1="/BitBox"; break;
+case 34: b1="/BitMax"; break;
+case 35: b1="/LINEBlockchainWallet"; break;
+case 36: b1="/BITMAX_Wallet"; break;
+case 37: b1="/DCONNECT"; break;
+case 38: b1="/line_list"; break;
+case 39: b1="/TRIVIAGO"; break;
+case 40: b1="/linepay_jp"; break;
+case 41: b1="/GlobalNFTWallet"; break;
+case 42: b1="/DosiBrandStore"; break;
+case 43: b1="/DOSI_Citizen";break;
+case 44: b1="/linemusic_for_artists";break;
+
+
+
+      }
+
+      }
+
+function changecategoryreal()
+{
+
+var aa=document.getElementById("Select2real");
+
+if (aa.value === "LINE STORE")
+{document.getElementById("Select3real").value="Web";
+
+}
+
+else if (aa.value === "User Sticker")
+{document.getElementById("Select3real").value="Web";}
+
+else if (aa.value === "LINE Blockchain Wallet")
+{document.getElementById("Select3real").value="Web";}
+
+else if (aa.value === "LINE Business ID")
+{document.getElementById("Select3real").value="Web";}
+
+else if (aa.value === "LAP Help Center TH")
+{document.getElementById("Select3real").value="Windows";}
+
+else if (aa.value === "LAP Help Center TW")
+{document.getElementById("Select3real").value="Windows"; }
+
+else if (aa.value === "LINE Ads Platform")
+{document.getElementById("Select3real").value="Windows"; }
+
+else if (aa.value === "BITMAX Wallet")
+{document.getElementById("Select3real").value="Web"; }
+
+else if (aa.value === "DOSI wallet")
+{document.getElementById("Select3real").value="Web"; }
+
+else if (aa.value === "DOSI Brand Store")
+{document.getElementById("Select3real").value="Web"; }
+
+else if (aa.value === "DOSI Citizen")
+{document.getElementById("Select3real").value="Web"; }
+
+else if (aa.value === "LINE Music For Artists")
+{document.getElementById("Select3real").value="Web"; }
+
+else 
+{document.getElementById("Select3real").value="Android/iOS";}
+ 
+} 
+
+function changecategory()
+{
+
+var aa=document.getElementById("Select2");
+
+if (aa.value === "LINE STORE")
+{document.getElementById("Select3").value="Web";
+
+}
+
+else if (aa.value === "User Sticker")
+{document.getElementById("Select3").value="Web";}
+
+else if (aa.value === "LINE Blockchain Wallet")
+{document.getElementById("Select3").value="Web";}
+
+else if (aa.value === "LINE Business ID")
+{document.getElementById("Select3").value="Web";}
+
+else if (aa.value === "LAP Help Center TH")
+{document.getElementById("Select3").value="Windows";}
+
+else if (aa.value === "LAP Help Center TW")
+{document.getElementById("Select3").value="Windows"; }
+
+else if (aa.value === "LINE Ads Platform")
+{document.getElementById("Select3").value="Windows"; }
+
+else if (aa.value === "BITMAX Wallet")
+{document.getElementById("Select3").value="Web"; }
+
+else if (aa.value === "DOSI wallet")
+{document.getElementById("Select3").value="Web"; }
+
+else if (aa.value === "DOSI Brand Store")
+{document.getElementById("Select3").value="Web"; }
+
+else if (aa.value === "DOSI Citizen")
+{document.getElementById("Select3").value="Web"; }
+
+else if (aa.value === "LINE Music For Artists")
+{document.getElementById("Select3").value="Web"; }
+
+else 
+{document.getElementById("Select3").value="Android/iOS";}
+ 
+} 
+
+function changeclr(clr){
+document.getElementById('headreal').style.backgroundColor = clr;
+document.getElementById('headbeta').style.backgroundColor = clr;
+document.getElementById('headcheck').style.backgroundColor = clr;
+localStorage.setItem("borderclr",clr);
+}
+
+function changeclr2(){
+ninicolor=document.getElementById('niniiro').value;
+document.getElementById('headreal').style.backgroundColor = ninicolor;
+document.getElementById('headbeta').style.backgroundColor = ninicolor;
+document.getElementById('headcheck').style.backgroundColor = ninicolor;
+
+localStorage.setItem("borderclr",ninicolor);
+}
+
+function changeclrButton(clrButton){
+document.getElementById('search1').style.backgroundColor = clrButton;
+document.getElementById('search2').style.backgroundColor = clrButton;
+document.getElementById('open1').style.backgroundColor = clrButton;
+document.getElementById('open2').style.backgroundColor = clrButton;
+document.getElementById('open3').style.backgroundColor = clrButton;
+document.getElementById('preview1').style.color = clrButton;
+document.getElementById('preview1_2').style.color = clrButton;
+document.getElementById('preview2').style.color = clrButton;
+document.getElementById('preview2_2').style.color = clrButton;
+
+localStorage.setItem("Buttonclr",clrButton);
+}
+
+function changeclrButton2(){
+ninicolorButton=document.getElementById('niniiroButton').value;
+document.getElementById('search1').style.backgroundColor = ninicolorButton;
+document.getElementById('search2').style.backgroundColor = ninicolorButton;
+document.getElementById('open1').style.backgroundColor = ninicolorButton;
+document.getElementById('open2').style.backgroundColor = ninicolorButton;
+document.getElementById('open3').style.backgroundColor = ninicolorButton;
+document.getElementById('preview1').style.color = ninicolorButton;
+document.getElementById('preview1_2').style.color = ninicolorButton;
+document.getElementById('preview2').style.color = ninicolorButton;
+document.getElementById('preview2_2').style.color = ninicolorButton;
+
+localStorage.setItem("Buttonclr",ninicolorButton);
+
+}
+
+//**********plus-minus-----------------------------------------
+
+ changeclrButton
+
+function contentidplus(){
+var textField = document.getElementById("ContentID");
+
+var currentValue = parseInt(textField.value);
+    currentValue = currentValue + 1;
+    textField.value = currentValue;
+
+Gotolink();
+
+
+}
+
+function contentidminus(){
+
+var textField = document.getElementById("ContentID");
+
+var currentValue = parseInt(textField.value);
+    currentValue = currentValue - 1;
+    textField.value = currentValue;
+
+Gotolink();
+
+}
+
+function contentidplusReal(){
+var textField = document.getElementById("ContentIDreal");
+
+var currentValue = parseInt(textField.value);
+    currentValue = currentValue + 1;
+    textField.value = currentValue;
+
+
+Gotolinkreal();
+
+}
+
+function contentidminusReal(){
+
+var textField = document.getElementById("ContentIDreal");
+
+var currentValue = parseInt(textField.value);
+    currentValue = currentValue - 1;
+    textField.value = currentValue;
+
+Gotolinkreal();
+
+
+}
+
+
+
+
+//*************get data from local-storage
+
+function getstorage(){
+
+clr2 = localStorage.getItem("borderclr");
+document.getElementById('headreal').style.backgroundColor = clr2;
+document.getElementById('headbeta').style.backgroundColor = clr2;
+document.getElementById('headcheck').style.backgroundColor = clr2;
+
+clr2Button = localStorage.getItem("Buttonclr");
+document.getElementById('search1').style.backgroundColor = clr2Button;
+document.getElementById('search2').style.backgroundColor = clr2Button;
+document.getElementById('open1').style.backgroundColor = clr2Button;
+document.getElementById('open2').style.backgroundColor = clr2Button;
+document.getElementById('open3').style.backgroundColor = clr2Button;
+document.getElementById('preview1').style.color = clr2Button;
+document.getElementById('preview1_2').style.color = clr2Button;
+document.getElementById('preview2').style.color = clr2Button;
+document.getElementById('preview2_2').style.color = clr2Button;
+
+
+langbeta = localStorage.getItem("LanguageStore");
+Select1.value=langbeta;
+
+langreal = localStorage.getItem("LanguageStoreReal");
+Select1real.value=langreal;
+
+langcheck = localStorage.getItem("LanguageStoreCheck");
+helpcheck1.value=langcheck;
+
+
+}
+//***************************PressEnter***
+
+function pressEnterBeta1(code)
+{
+	if(13 === code)
+	{
+		SearchWordBeta();
+	}
+}
+
+function pressEnterBeta2(code)
+{
+	if(13 === code)
+	{
+		Gotolink();
+	}
+}
+
+
+function pressEnterReal1(code)
+{
+	if(13 === code)
+	{
+		SearchWordReal();
+	}
+}
+
+function pressEnterReal2(code)
+{
+	if(13 === code)
+	{
+		Gotolinkreal();
+	}
+}
+
+
+//***********Search Word***************
+
+function SearchWordBeta() {
+
+dword=document.getElementById("SearchBeta").value;
+
+//language
+       combo1 = document.getElementById("Select1");
+      switch (combo1.selectedIndex) {
+        case 0:
+          a = "ja";
+          break;
+        case 1:
+          a = "en";
+          break;
+        case 2:
+          a = "zh-Hant";
+          break;
+        case 3:
+          a = "zh-Hans";
+          break;
+        case 4:
+          a = "id";
+          break;
+        case 5:
+          a = "es";
+          break;
+        case 6:
+          a = "ko";
+          break;
+        case 7:
+          a = "th";
+          break;
+        
+      }
+
+  //service
+     combo2 = document.getElementById("Select2");
+     beta_list();
+
+
+//device
+combo3 = document.getElementById("Select3");
+      switch (combo3.selectedIndex) {
+        case 0:
+        c = "/smartphone";
+          break;
+		case 1:
+        c = "/desktop";
+          break;			
+		case 2:
+        c = "/ios";
+          break;
+        case 3:
+         c = "/android";
+          break;
+        case 4:
+          c = "/IOSSecondary";
+          break;
+        case 5:
+          c = "/win";
+          break;
+        case 6:
+          c = "/mac";
+          break;
+        case 7:
+          c = "/chrome";
+          break;
+        case 8:
+          c = "/web";
+          break;
+        
+        
+
+      }
+
+
+
+
+var newwindowlink="https://162-lan-admin-legacy.hub-beta.linecorp.com/help"+b+c+"/"+a+"/searchResultNew.nhn?q="+dword;
+
+//https://162-lan-admin-legacy.hub-beta.linecorp.com/help/line/smartphone/th/searchResultNew.nhn?q=
+
+window.open(newwindowlink, "_blank");
+
+//top.frames["migi"].location.href = "https://162-lan-admin-legacy.hub-beta.linecorp.com/help"+b+c+"/"+a+"/searchResultNew.nhn?q="+dword;
+
+
+}
+
+//*******************************************************
+
+function SearchWordReal() {
+
+dwordreal=document.getElementById("SearchReal").value;
+
+//language
+       combo1real = document.getElementById("Select1real");
+      switch (combo1real.selectedIndex) {
+        case 0:
+          a1 = "ja";
+          break;
+        case 1:
+          a1 = "en";
+          break;
+        case 2:
+          a1 = "zh-Hant";
+          break;
+        case 3:
+          a1 = "zh-Hans";
+          break;
+        case 4:
+          a1 = "id";
+          break;
+        case 5:
+          a1 = "es";
+          break;
+        case 6:
+          a1 = "ko";
+          break;
+        case 7:
+          a1 = "th";
+          break;
+      
+      }
+
+  //service
+     combo2real = document.getElementById("Select2real");
+     real_list();
+
+//device
+combo3real = document.getElementById("Select3real");
+      switch (combo3real.selectedIndex) {
+        case 0:
+        c1 = "/smartphone";
+          break;
+		case 1:
+          c1 = "/desktop";
+          break;
+		
+		case 2:
+          c1 = "/ios";
+          break;
+        case 3:
+          c1 = "/android";
+          break;
+        case 4:
+          c1 = "/IOSSecondary";
+          break;
+        case 5:
+          c1 = "/win";
+          break;
+        case 6:
+          c1 = "/mac";
+          break;
+        case 7:
+          c1 = "/chrome";
+          break;
+        case 8:
+          c1 = "/web";
+          break;
+            
+        
+      }
+
+top.frames["migi"].location.href = "https://admin-noti.sentinel.linecorp.com/help"+b1+c1+"/"+a1+"/searchResultNew.nhn?q="+dwordreal;
+
+//admin-noti.linecorp.jp:20080/help/line/android/ja/searchResultNew.nhn?q=認証番号
+}
+
+
+//**************************************************
+
+
+function Gotolinkreal() {
+
+d1=document.getElementById("ContentIDreal").value;
+
+//language
+       combo1real = document.getElementById("Select1real");
+      switch (combo1real.selectedIndex) {
+        case 0:
+          a1 = "ja";
+          localStorage.setItem("LanguageStoreReal","0");
+          break;
+        case 1:
+          a1 = "en";
+          localStorage.setItem("LanguageStoreReal","1");
+          break;
+        case 2:
+          a1 = "zh-Hant";
+          localStorage.setItem("LanguageStoreReal","2");
+          break;
+        case 3:
+          a1 = "zh-Hans";
+          localStorage.setItem("LanguageStoreReal","3");
+          break;
+        case 4:
+          a1 = "id";
+          localStorage.setItem("LanguageStoreReal","4");
+          break;
+        case 5:
+          a1 = "es";
+          localStorage.setItem("LanguageStoreReal","5");
+          break;
+        case 6:
+          a1 = "ko";
+          localStorage.setItem("LanguageStoreReal","6");
+          break;
+        case 7:
+          a1 = "th";
+          localStorage.setItem("LanguageStoreReal","7");
+          break;
+        
+      }
+
+  //service
+     combo2real = document.getElementById("Select2real");
+    real_list();
+
+//device
+combo3real = document.getElementById("Select3real");
+      switch (combo3real.selectedIndex) {
+         case 0:
+        c1 = "/smartphone";
+          break;
+		case 1:
+          c1 = "/desktop";
+          break;
+		
+		case 2:
+          c1 = "/ios";
+          break;
+        case 3:
+          c1 = "/android";
+          break;
+        case 4:
+          c1 = "/IOSSecondary";
+          break;
+        case 5:
+          c1 = "/win";
+          break;
+        case 6:
+          c1 = "/mac";
+          break;
+        case 7:
+          c1 = "/chrome";
+          break;
+        case 8:
+          c1 = "/web";
+          break;
+        
+      }
+
+      if (d1== "") {
+
+          top.frames["migi"].location.href = "https://admin-noti.sentinel.linecorp.com/help"+b1+c1+"/"+a1+"/categoryViewNew.nhn";
+          
+      } else {
+
+document.getElementById("helpcheckid").value= "https://help.line.me"+b1+c1+"/?contentId="+d1;
+
+//https://help.line.me/line/android/?contentId=50000831&country=TH&lang=th
+
+        top.frames["migi"].location.href = "https://admin-noti.sentinel.linecorp.com/help"+b1+c1+"/"+a1+"/helpArticleViewNew.nhn?articleSequence="+d1;
+
+
+        ////https://admin-noti.sentinel.linecorp.com/help/creators/android/th/helpArticleViewNew.nhn?articleSequence=20005126
+
+
+      }
+
+
+    }
+
+//*****************************************************************************
+
+
+function Openrealhelp(){
+
+var dreal=document.getElementById("helpcheckid").value;
+
+//language
+       helpchecklist = document.getElementById("helpcheck1");
+      switch (helpchecklist.selectedIndex) {
+        case 0:
+          a2 = "ja";
+          localStorage.setItem("LanguageStoreCheck","0");
+          break;
+        case 1:
+          a2 = "en";
+          localStorage.setItem("LanguageStoreCheck","1");
+          break;
+        case 2:
+          a2 = "zh-Hant";
+          localStorage.setItem("LanguageStoreCheck","2");
+          break;
+        case 3:
+          a2 = "zh-Hans";
+          localStorage.setItem("LanguageStoreCheck","3");
+          break;
+        case 4:
+          a2 = "id";
+          localStorage.setItem("LanguageStoreCheck","4");
+          break;
+        case 5:
+          a2 = "es";
+          localStorage.setItem("LanguageStoreCheck","5");
+          break;
+        case 6:
+          a2 = "ko";
+          localStorage.setItem("LanguageStoreCheck","6");
+          break;
+        case 7:
+          a2 = "th";
+          localStorage.setItem("LanguageStoreCheck","7");
+          break;
+        
+      }
+
+helpchecklist2 = document.getElementById("helpcheck2");
+      switch (helpchecklist2.selectedIndex) {
+
+        case 0:
+          a3 = "JA";
+          break;
+
+        case 1:
+          a3 = "TH";
+          break;
+
+        case 2:
+          a3 = "TW";
+          break;
+
+        case 3:
+          a3 = "CN";
+          break;
+
+        case 4:
+          a3 = "IN";
+          break;
+
+        case 5:
+          a3 = "ES";
+          break;
+
+        case 6:
+          a3 = "KO";
+          break;
+ }
+
+top.frames["migi"].location.href = dreal+"&lang="+a2+"&country="+a3;
+
+//https://help.line.me/line/?contentId=20000199&lang=th&country=JA
+
+}
+
+
+//****************************************************
+
+function Gotolink() {
+
+d=document.getElementById("ContentID").value;
+
+//language
+       combo1 = document.getElementById("Select1");
+      switch (combo1.selectedIndex) {
+        case 0:
+          a = "ja";
+          localStorage.setItem("LanguageStore","0");
+          break;
+        case 1:
+          a = "en";
+          localStorage.setItem("LanguageStore","1");
+          break;
+        case 2:
+          a = "zh-Hant";
+          localStorage.setItem("LanguageStore","2");
+          break;
+        case 3:
+          a = "zh-Hans";
+          localStorage.setItem("LanguageStore","3");
+          break;
+        case 4:
+          a = "id";
+          localStorage.setItem("LanguageStore","4");
+          break;
+        case 5:
+          a = "es";
+          localStorage.setItem("LanguageStore","5");
+          break;
+        case 6:
+          a = "ko";
+          localStorage.setItem("LanguageStore","6");
+          break;
+        case 7:
+          a = "th";
+          localStorage.setItem("LanguageStore","7");
+          break;
+       
+      }
+
+  //service
+     combo2 = document.getElementById("Select2");
+      beta_list();
+
+      
+
+//device
+combo3 = document.getElementById("Select3");
+      switch (combo3.selectedIndex) {
+          case 0:
+        c = "/smartphone";
+          break;
+	case 1:
+        c = "/desktop";
+          break;
+	
+	case 2:
+        c = "/ios";
+          break;
+        case 3:
+         c = "/android";
+          break;
+        case 4:
+          c = "/IOSSecondary";
+          break;
+        case 5:
+          c = "/win";
+          break;
+        case 6:
+          c = "/mac";
+          break;
+        case 7:
+          c = "/chrome";
+          break;
+        case 8:
+          c = "/web";
+          break;
+      }
+
+
+
+if (d== "") {
+
+    top.frames["migi"].location.href = "https://162-lan-admin-legacy.hub-beta.linecorp.com/help"+b+c+"/"+a+"/categoryViewNew.nhn";
+   
+} else {
+
+document.getElementById("helpcheckid").value= "https://help.line.me"+b+c+"/?contentId="+d;
+
+
+//
+
+var newwindowlink= "https://162-lan-admin-legacy.hub-beta.linecorp.com/help"+b+c+"/"+a+"/helpArticleViewNew.nhn?articleSequence="+d;
+window.open(newwindowlink, "_blank");
+
+//window.open(newwindowlink, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+
+
+//document.getElementById('helpiframe').src = newwindowlink;
+
+//window.open(newwindowlink, "_blank", "resizable=yes, scrollbars=yes, titlebar=yes, width=1500 height=900, top=200, left=500");
+
+//window.open(url, "_blank", "resizable=yes, scrollbars=yes, titlebar=yes, width=800, height=900, top=10, left=10");
+
+
+//top.frames["migi"].location.href = "https://162-lan-admin-legacy.hub-beta.linecorp.com/help"+b+c+"/"+a+"/helpArticleViewNew.nhn?articleSequence="+d;
+
+
+
+}
+
+
+
+    }
+
+//*****************************************************************************
+
+
+
+function Preview(){
+
+d=document.getElementById("ContentID").value;
+
+//language
+       combo1 = document.getElementById("Select1");
+      switch (combo1.selectedIndex) {
+        case 0:
+          a = "ja";
+          break;
+        case 1:
+          a = "en";
+          break;
+        case 2:
+          a = "zh-Hant";          
+          break;
+        case 3:
+          a = "zh-Hans";          
+          break;
+        case 4:
+          a = "id";          
+          break;
+        case 5:
+          a = "es";          
+          break;
+        case 6:
+          a = "ko";          
+          break;
+        case 7:
+          a = "th";          
+          break;
+        
+      }
+
+  //service
+     combo2 = document.getElementById("Select2");
+    beta_list();
+     
+
+
+//device
+combo3 = document.getElementById("Select3");
+      switch (combo3.selectedIndex) {
+  case 0:
+        c = "/smartphone";
+          break;
+	
+	case 1:
+        c = "/desktop";
+          break;
+	
+	case 2:
+        c = "/ios";
+          break;
+        case 3:
+         c = "/android";
+          break;
+        case 4:
+          c = "/IOSSecondary";
+          break;
+        case 5:
+          c = "/win";
+          break;
+        case 6:
+          c = "/mac";
+          break;
+        case 7:
+          c = "/chrome";
+          break;
+        case 8:
+          c = "/web";
+          break;
+      }
+
+
+top.frames["migi"].location.href = "https://help2.line-beta.me"+b+c+"/sp?contentId="+d+"&lang="+a;
+
+}
+
+function Preview_2(){
+
+d=document.getElementById("ContentID").value;
+
+//language
+       combo1 = document.getElementById("Select1");
+      switch (combo1.selectedIndex) {
+        case 0:
+          a = "ja";
+          break;
+        case 1:
+          a = "en";
+          break;
+        case 2:
+          a = "zh-Hant";          
+          break;
+        case 3:
+          a = "zh-Hans";          
+          break;
+        case 4:
+          a = "id";          
+          break;
+        case 5:
+          a = "es";          
+          break;
+        case 6:
+          a = "ko";          
+          break;
+        case 7:
+          a = "th";          
+          break;
+        
+      }
+
+  //service
+     combo2 = document.getElementById("Select2");
+    beta_list();
+     
+
+
+//device
+combo3 = document.getElementById("Select3");
+      switch (combo3.selectedIndex) {
+  case 0:
+        c = "/smartphone";
+          break;
+	
+	case 1:
+        c = "/desktop";
+          break;
+	
+	case 2:
+        c = "/ios";
+          break;
+        case 3:
+         c = "/android";
+          break;
+        case 4:
+          c = "/IOSSecondary";
+          break;
+        case 5:
+          c = "/win";
+          break;
+        case 6:
+          c = "/mac";
+          break;
+        case 7:
+          c = "/chrome";
+          break;
+        case 8:
+          c = "/web";
+          break;
+      }
+
+
+top.frames["migi"].location.href = "https://help2.line-beta.me"+b+c+"/?contentId="+d+"&lang="+a;
+
+}
+
+
+
+function Preview2(){
+
+d1=document.getElementById("ContentIDreal").value;
+
+//language
+       combo1real = document.getElementById("Select1real");
+      switch (combo1real.selectedIndex) {
+        case 0:
+          a1 = "ja";          
+          break;
+        case 1:
+          a1 = "en";          
+          break;
+        case 2:
+          a1 = "zh-Hant";          
+          break;
+        case 3:
+          a1 = "zh-Hans";          
+          break;
+        case 4:
+          a1 = "id";          
+          break;
+        case 5:
+          a1 = "es";          
+          break;
+        case 6:
+          a1 = "ko";          
+          break;
+        case 7:
+          a1 = "th";          
+          break;
+       
+      }
+
+  //service
+     combo2real = document.getElementById("Select2real");
+     real_list();
+
+//device
+combo3real = document.getElementById("Select3real");
+      switch (combo3real.selectedIndex) {
+     	case 0:
+	 c1 = "/smartphone";
+          break;
+	
+	case 1:
+          c1 = "/desktop";
+          break;	
+
+	case 2:
+          c1 = "/ios";
+          break;
+        case 3:
+          c1 = "/android";
+          break;
+        case 4:
+          c1 = "/IOSSecondary";
+          break;
+        case 5:
+          c1 = "/win";
+          break;
+        case 6:
+          c1 = "/mac";
+          break;
+        case 7:
+          c1 = "/chrome";
+          break;
+        case 8:
+          c1 = "/web";
+          break;
+        
+      }
+
+top.frames["migi"].location.href = "https://help2.line.me"+b1+c1+"/sp?contentId="+d1+"&lang="+a1;
+
+
+}
+
+function Preview2_2(){
+
+d1=document.getElementById("ContentIDreal").value;
+
+//language
+       combo1real = document.getElementById("Select1real");
+      switch (combo1real.selectedIndex) {
+        case 0:
+          a1 = "ja";          
+          break;
+        case 1:
+          a1 = "en";          
+          break;
+        case 2:
+          a1 = "zh-Hant";          
+          break;
+        case 3:
+          a1 = "zh-Hans";          
+          break;
+        case 4:
+          a1 = "id";          
+          break;
+        case 5:
+          a1 = "es";          
+          break;
+        case 6:
+          a1 = "ko";          
+          break;
+        case 7:
+          a1 = "th";          
+          break;
+       
+      }
+
+  //service
+     combo2real = document.getElementById("Select2real");
+     real_list();
+
+//device
+combo3real = document.getElementById("Select3real");
+      switch (combo3real.selectedIndex) {
+     	case 0:
+	 c1 = "/smartphone";
+          break;
+	
+	case 1:
+          c1 = "/desktop";
+          break;	
+
+	case 2:
+          c1 = "/ios";
+          break;
+        case 3:
+          c1 = "/android";
+          break;
+        case 4:
+          c1 = "/IOSSecondary";
+          break;
+        case 5:
+          c1 = "/win";
+          break;
+        case 6:
+          c1 = "/mac";
+          break;
+        case 7:
+          c1 = "/chrome";
+          break;
+        case 8:
+          c1 = "/web";
+          break;
+        
+      }
+
+top.frames["migi"].location.href = "https://help2.line.me"+b1+c1+"/?contentId="+d1+"&lang="+a1;
+
+
+}
+
+
+
+function Explain() {
+window.open("https://wiki.workers-hub.com/display/globalcontentdept/Help+Support+Tool");
+}
+
+function updaterireki(){
+ var x = document.getElementById("rireki");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function opensetting(){
+ var x = document.getElementById("settingdiv");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+        document.getElementById("rireki").style.display="none";
+    }
+}
+
+
+
+
+
+
+</script>
+
+</head>
+
+
+
+
+
+<br>
+
+
+
+
+
+
+  </body>
+  
+  
+  <table border="0" cellpadding="5" cellspacing="1">
+	<tbody>
+		<tr style="vertical-align:top">
+			<td><!*********************************BETA LAN***************************************>
+
+<div id="headbeta" class="headlan">
+&nbsp;&nbsp;βLAN
+</div>
+
+<body onload="getstorage()" bgcolor="white">
+
+<div class="box">
+<table border="0" width="360" cellspacing="1" cellpadding="0">
+<tr>
+<td>Language：</td>
+<td><select id="Select1">
+  <option value=0>Japanese</option>
+  <option value=1>English</option>
+  <option value=2>Taiwanese</option>
+  <option value=3>Chinese</option>
+  <option value=4>Indonesian</option>
+  <option value=5>Español</option>
+  <option value=6>Korean</option>
+  <option value=7>Thai</option>
+
+</select>
+</td>
+</tr>
+<tr>
+<td>Service：</td>
+<td><select id="Select2" style="WIDTH: 160px;" onchange="changecategory()" )>
+<option>LINE</option>
+<option>Creators App</option>
+<option>User Sticker</option>
+<option>LINE MUSIC</option>
+<option>LINE LIVE JP</option>
+<option>LINE LIVE GBL</option>
+<option>LINE POINTS CLUB</option>
+<option>LINE STORE</option>
+<option>LINE Business ID</option>
+<option>LINE@</option>
+<option>LINE@ ID</option>
+<option>LINE@ CMS</option>
+<option>LINE@ TH</option>
+<option>LINE Official Account EN KO</option>
+<option>JP Official Account</option>
+<option>TW Official Account</option>
+<option>TH Official Account</option>
+<option>ID Official Account</option>
+<option>LINE Ads Platform</option>
+<option>LAP Help Center TW</option>
+<option>LAP Help Center TH</option>
+<option>linemanga</option>
+<option>LINE マンガ global</option>
+<option>LINK ME</option>
+<option>B612</option>
+<option>LOOKS</option>
+<option>Coupon Book</option>
+<option>LINE Notify</option>
+<option>linecamera2</option>
+<option>LINE Antivirus</option>
+<option>Foodie</option>
+<option>Foodie China</option>
+<option>BITBOX（CTC）</option>
+<option>BITMAX（FTC）</option>
+<option>LINE Blockchain Wallet</option>
+<option>BITMAX Wallet</option>
+<option>SWAY</option>
+<option>LINE LIST</option>
+<option>T-Go!</option>
+<option>LINE Pay Japan</option>
+<option>DOSI wallet</option>
+<option>DOSI Brand Store</option>
+<option>DOSI Citizen</option>
+<option>LINE Music For Artists</option>
+
+
+
+
+
+
+
+</select></td>
+</tr>
+<tr>
+<td>Device：</td>
+<td><select id="Select3" style="WIDTH: 160px;">
+<option>Android/iOS</option>
+<option>Desktop</option>
+  <option>iOS</option>
+  <option>Android</option>
+  <option>iPad</option>
+  <option>Windows</option>
+  <option>Mac</option>
+  <option>Chrome</option>
+  <option>Web</option>
+  
+
+
+</select></td>
+</tr>
+<tr>
+<td>Search Word：</td>
+<td><input size="18" type="text" id="SearchBeta"
+onkeypress="pressEnterBeta1(event.keyCode)"/>
+<button id="search1" class="square_btn" onclick="SearchWordBeta()" style="WIDTH: 40px;">
+
+<svg xmlns="http://www.w3.org/2000/svg" data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width="10px"><g transform="translate(-2 -2)"><path d="m19.643 21.0572-5.6723-5.6723 1.4142-1.4142 5.6723 5.6723-1.4142 1.4142Z"/><path d="M10.2563 5C7.3533 5 5 7.3533 5 10.2563c0 2.903 2.3533 5.2563 5.2563 5.2563 2.903 0 5.2563-2.3533 5.2563-5.2563C15.5126 7.3533 13.1593 5 10.2563 5ZM3 10.2563C3 6.2488 6.2488 3 10.2563 3s7.2563 3.2488 7.2563 7.2563-3.2488 7.2563-7.2563 7.2563S3 14.2638 3 10.2563Z"/></g></svg>
+
+</button>
+</td>
+</tr>
+<tr>
+<td>Content ID：</td>
+<td><input size="18" type="text" id="ContentID" onkeypress="pressEnterBeta2(event.keyCode)"/>
+<button class="square_btn" style="color: black; background: lavender; WIDTH: 20px; height:23px" onclick="contentidplus()">+</button>
+<button class="square_btn" style="color: black; background: lavender; WIDTH: 20px;height:23px" onclick="contentidminus()">-</button>
+<button id='open1' class="square_btn" onclick="Gotolink()" style="width:40px">
+<svg xmlns="http://www.w3.org/2000/svg" data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width=10px><g transform="translate(-2 -2)"><path d="M12.7655 7.0653V5.4558c0-.6967.8624-1.1792 1.3014-.9027l6.7911 5.5004c.3649.2444.3339 1.0232 0 1.354l-6.3604 5.1483c-.8442.7641-1.7801.1149-1.7801-.6272v-1.6197c0-.9786.1906-.8398-.7344-.7582s-7.3144.897-7.8033 5.9754c0 0-1.3902-1.7158-1.2958-3.9316 0-2.8203 2.9778-7.5968 9.8815-7.9542v-.575Z"/></g></svg>
+
+</button>
+
+</td>
+</tr>
+</table>
+<br>
+
+<button id="preview1" class="square_btn" onclick="Preview()" style="color: black;background:none;border:none;box-shadow:none;" title="Preview in Smartphone">
+
+<svg xmlns="http://www.w3.org/2000/svg" data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width=15px><g transform="translate(-2 -2)"><path d="M7.0002 7h-4l4-4v4Zm4.6 13.6h-7.7c-.6 0-1.2-.5-1.2-1.2V8h5.3V2.7h8.9c.6 0 1.2.5 1.2 1.2v9.7c-.5-.1-1-.2-1.5-.2-2.6 0-4.8 1.6-6 3.8l-.6 1 .5.9c.3.6.7 1.1 1.1 1.5Zm.1-2.7c1-1.9 2.8-3.1 4.9-3.1 2 0 3.8 1.2 4.9 3.1l.2.3-.2.3c-1 1.9-2.8 3.1-4.9 3.1-2 0-3.9-1.2-4.9-3.1l-.2-.3.2-.3Zm3.8.3c0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.7 0-1.1-.5-1.1-1.1Zm1.1-1.9c-1 0-1.9.9-1.9 1.9 0 1 .9 1.9 1.9 1.9 1 0 1.9-.9 1.9-1.9 0-1.1-.9-1.9-1.9-1.9Z"/></g></svg>
+
+</button>
+<button id="preview1_2" class="square_btn" onclick="Preview_2()" style="color: black;background:none;border:none;box-shadow:none;"title="Preview in PC">
+
+<svg xmlns="http://www.w3.org/2000/svg" data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width=15px><g transform="translate(-2 -2)"><path d="M7.0002 7h-4l4-4v4Zm4.6 13.6h-7.7c-.6 0-1.2-.5-1.2-1.2V8h5.3V2.7h8.9c.6 0 1.2.5 1.2 1.2v9.7c-.5-.1-1-.2-1.5-.2-2.6 0-4.8 1.6-6 3.8l-.6 1 .5.9c.3.6.7 1.1 1.1 1.5Zm.1-2.7c1-1.9 2.8-3.1 4.9-3.1 2 0 3.8 1.2 4.9 3.1l.2.3-.2.3c-1 1.9-2.8 3.1-4.9 3.1-2 0-3.9-1.2-4.9-3.1l-.2-.3.2-.3Zm3.8.3c0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.7 0-1.1-.5-1.1-1.1Zm1.1-1.9c-1 0-1.9.9-1.9 1.9 0 1 .9 1.9 1.9 1.9 1 0 1.9-.9 1.9-1.9 0-1.1-.9-1.9-1.9-1.9Z"/></g></svg>
+
+</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://liam-hub.hub-beta.linecorp.com/" target="_blank" class="link">Login βLAN</a>
+<br>
+<br>
+</div>
+<br>
+<!*********************************Real LAN***************************************>
+
+<div id="headreal" class="headlan">
+&nbsp;&nbsp;REAL LAN
+</div>
+<div class="box">
+<table border="0" width="360" cellspacing="1" cellpadding="0">
+<tr>
+<td>Language：</td>
+<td><select id="Select1real">
+  <option value=0>Japanese</option>
+  <option value=1>English</option>
+  <option value=2>Taiwanese</option>
+  <option value=3>Chinese</option>
+  <option value=4>Indonesian</option>
+  <option value=5>Español</option>
+  <option value=6>Korean</option>
+  <option value=7>Thai</option>
+
+
+</select></td>
+</tr>
+<tr>
+<td>Service：</td>
+<td><select id="Select2real"  style="WIDTH: 160px;" onchange="changecategoryreal()">
+<option>LINE</option>
+<option>Creators App</option>
+<option>User Sticker</option>
+<option>LINE Music</option>
+<option>LINE Pay カード</option>
+<option>LINE LIVE（JPN）</option>
+<option>LINE LIVE （GLB）</option>
+<option>LINE POINTS CLUB</option>
+<option>LINE STORE</option>
+<option>LINE Business ID</option>
+<option>LINE@</option>
+<option>LINE@ ID</option>
+<option>LINE@ 予約管理</option>
+<option>LINE@ TH</option>
+<option>LINE Official Account EN KO</option>
+<option>JP Official Account</option>
+<option>TW Official Account</option>
+<option>TH Official Account</option>
+<option>ID Official Account</option>
+<option>LINE Ads Platform</option>
+<option>LAP Help Center TW</option>
+<option>LAP Help Center TH</option>
+<option>linemanga</option>
+<option>LINE マンガ global</option>
+<option>LINK ME</option>
+<option>B612</option>
+<option>LOOKS</option>
+<option>Coupon Book</option>
+<option>LINE Notify</option>
+<option>linecamera2</option>
+<option>LINE Antivirus</option>
+<option>Foodie</option>
+<option>Foodie China</option>
+<option>BITBOX（CTC）</option>
+<option>BITMAX（FTC）</option>
+<option>LINE Blockchain Wallet</option>
+<option>BITMAX Wallet</option>
+<option>SWAY</option>
+<option>LINE LIST</option>
+<option>T-Go!</option>
+<option>LINE Pay Japan</option>
+<option>DOSI wallet</option>
+<option>DOSI Brand Store</option>
+<option>DOSI Citizen</option>
+<option>LINE Music For Artists</option>
+
+
+
+</select></td>
+</tr>
+<tr>
+<td>Device：</td>
+<td><select id="Select3real"  style="WIDTH: 160px;">
+  <option>Android/iOS</option>
+  <option>Desktop</option>
+  <option>iOS</option>
+  <option>Android</option>
+  <option>iPad</option>
+  <option>Windows</option>
+  <option>Mac</option>
+  <option>Chrome</option>
+  <option>Web</option>
+  
+
+</select></td>
+</tr>
+<tr>
+<td>Search Word：</td>
+<td>
+<input size="18" type="text" id="SearchReal"
+onkeypress="pressEnterReal1(event.keyCode)"/>
+<button id="search2" class="square_btn" onclick="SearchWordReal()" style="width:40px">
+<svg xmlns="http://www.w3.org/2000/svg" data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width="10px"><g transform="translate(-2 -2)"><path d="m19.643 21.0572-5.6723-5.6723 1.4142-1.4142 5.6723 5.6723-1.4142 1.4142Z"/><path d="M10.2563 5C7.3533 5 5 7.3533 5 10.2563c0 2.903 2.3533 5.2563 5.2563 5.2563 2.903 0 5.2563-2.3533 5.2563-5.2563C15.5126 7.3533 13.1593 5 10.2563 5ZM3 10.2563C3 6.2488 6.2488 3 10.2563 3s7.2563 3.2488 7.2563 7.2563-3.2488 7.2563-7.2563 7.2563S3 14.2638 3 10.2563Z"/></g></svg>
+</button>
+
+</td>
+</tr>
+<tr>
+<td>Content ID：</td>
+<td><input size="18" type="text" id="ContentIDreal" onkeypress="pressEnterReal2(event.keyCode)" />
+<button class="square_btn" style="color: black; background: lavender; WIDTH: 20px;height:23px" onclick="contentidplusReal()">+</button>
+<button class="square_btn" style="color: black; background: lavender; WIDTH: 20px;height:23px" onclick="contentidminusReal()">-</button>
+<button id="open2" class="square_btn" onclick="Gotolinkreal()" style="width:40px">
+
+<svg data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width=10px><g transform="translate(-2 -2)"><path d="M12.7655 7.0653V5.4558c0-.6967.8624-1.1792 1.3014-.9027l6.7911 5.5004c.3649.2444.3339 1.0232 0 1.354l-6.3604 5.1483c-.8442.7641-1.7801.1149-1.7801-.6272v-1.6197c0-.9786.1906-.8398-.7344-.7582s-7.3144.897-7.8033 5.9754c0 0-1.3902-1.7158-1.2958-3.9316 0-2.8203 2.9778-7.5968 9.8815-7.9542v-.575Z"/></g></svg>
+
+</button>
+
+</td>
+</tr>
+
+</table>
+
+<br>
+
+<button id="preview2" class="square_btn" onclick="Preview2()" style="color: black;background:none;border:none;box-shadow:none;"  title="Preview in Smartphone">
+<svg data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width=15px><g transform="translate(-2 -2)"><path d="M7.0002 7h-4l4-4v4Zm4.6 13.6h-7.7c-.6 0-1.2-.5-1.2-1.2V8h5.3V2.7h8.9c.6 0 1.2.5 1.2 1.2v9.7c-.5-.1-1-.2-1.5-.2-2.6 0-4.8 1.6-6 3.8l-.6 1 .5.9c.3.6.7 1.1 1.1 1.5Zm.1-2.7c1-1.9 2.8-3.1 4.9-3.1 2 0 3.8 1.2 4.9 3.1l.2.3-.2.3c-1 1.9-2.8 3.1-4.9 3.1-2 0-3.9-1.2-4.9-3.1l-.2-.3.2-.3Zm3.8.3c0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.7 0-1.1-.5-1.1-1.1Zm1.1-1.9c-1 0-1.9.9-1.9 1.9 0 1 .9 1.9 1.9 1.9 1 0 1.9-.9 1.9-1.9 0-1.1-.9-1.9-1.9-1.9Z"/></g></svg></button>
+<button id="preview2_2" class="square_btn" onclick="Preview2_2()" style="color: black;background:none;border:none;box-shadow:none;"  title="Preview in PC">
+
+<svg data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width=15px><g transform="translate(-2 -2)"><path d="M7.0002 7h-4l4-4v4Zm4.6 13.6h-7.7c-.6 0-1.2-.5-1.2-1.2V8h5.3V2.7h8.9c.6 0 1.2.5 1.2 1.2v9.7c-.5-.1-1-.2-1.5-.2-2.6 0-4.8 1.6-6 3.8l-.6 1 .5.9c.3.6.7 1.1 1.1 1.5Zm.1-2.7c1-1.9 2.8-3.1 4.9-3.1 2 0 3.8 1.2 4.9 3.1l.2.3-.2.3c-1 1.9-2.8 3.1-4.9 3.1-2 0-3.9-1.2-4.9-3.1l-.2-.3.2-.3Zm3.8.3c0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.7 0-1.1-.5-1.1-1.1Zm1.1-1.9c-1 0-1.9.9-1.9 1.9 0 1 .9 1.9 1.9 1.9 1 0 1.9-.9 1.9-1.9 0-1.1-.9-1.9-1.9-1.9Z"/></g></svg>
+</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href=""https://liam-hub.hub.linecorp.com/" target="_blank" class="link">Login LAN</a>
+
+</div>
+<br>
+
+<!**************************Help Check****************************>
+
+<div id="headcheck" class="headlan">
+&nbsp;&nbsp;Help Check
+</div>
+<div class="box2">
+<table border="0" width="350" cellspacing="1" cellpadding="0">
+<tr>
+<td>Language：</td>
+<td>
+<select id="helpcheck1">
+  <option value=0>Japanese</option>
+  <option value=1>English</option>
+  <option value=2>Taiwanese</option>
+  <option value=3>Chinese</option>
+  <option value=4>Indonesian</option>
+  <option value=5>Español</option>
+  <option value=6>Korean</option>
+  <option value=7>Thai</option>
+</select>
+
+</td>
+</tr>
+<tr>
+<td>Country：</td>
+
+<td>
+
+<select id="helpcheck2">
+  <option value=0>JP</option>
+  <option value=1>TH</option>
+  <option value=2>TW</option>
+  <option value=3>CN</option>
+  <option value=4>IN</option>
+  <option value=5>ES</option>
+  <option value=6>KO</option>
+
+
+</select>
+
+</td>
+</tr>
+
+<tr>
+<td>Help URL：</td>
+
+<td>
+
+<input size="25" type="text" id="helpcheckid"/>
+<button id='open3' class="square_btn" onclick="Openrealhelp()" style="width:40px">
+
+<svg data-laicon-version="15.0" viewBox="0 0 20 20" fill="currentColor" width=10px><g transform="translate(-2 -2)"><path d="M12.7655 7.0653V5.4558c0-.6967.8624-1.1792 1.3014-.9027l6.7911 5.5004c.3649.2444.3339 1.0232 0 1.354l-6.3604 5.1483c-.8442.7641-1.7801.1149-1.7801-.6272v-1.6197c0-.9786.1906-.8398-.7344-.7582s-7.3144.897-7.8033 5.9754c0 0-1.3902-1.7158-1.2958-3.9316 0-2.8203 2.9778-7.5968 9.8815-7.9542v-.575Z"/></g></svg>
+</button><br>
+
+</td>
+
+</tr>
+</table>
+<br><br><br><br>
+<div align="right"><button class="setting" onclick="opensetting()"><img src="setting.png"  width="30" height="30"></img></button><br><br></div>
+
+<div id="settingdiv"  style="display:none;">
+
+<b>Box Color :</b>
+<input type="button" value="" style="background-color:limegreen;border-style: none;" onclick="changeclr('limegreen')">
+
+<input type="button" value="" style="background-color:lightskyblue;border-style: none;" onclick="changeclr('lightskyblue')">
+
+<input type="button" value="" style="background-color:gold;border-style: none;" onclick="changeclr('gold')">
+
+<input type="button" value="" style="background-color:hotpink;border-style: none;" onclick="changeclr('hotpink')">
+
+<input type="button" value="" style="background-color:saddlebrown;border-style: none;" onclick="changeclr('saddlebrown')">
+
+<input type="button" value="" style="background-color:white;border-style: solid;" onclick="changeclr('white')">
+
+<input type="button" value="" style="background-color:black;border-style: none;" onclick="changeclr('black')">
+
+<input type="button" value="" style="background-color:darkorchid;border-style: none;" onclick="changeclr('darkorchid')">
+
+<input size='5' id="niniiro" placeholder="color code">
+<input type="button" value="ok" style="background-color:grey; border-style: none;" onclick="changeclr2()">
+
+<br>
+
+<b>Button Color : </b>
+<input type="button" value="" style="background-color:limegreen;border-style: none;" onclick=" changeclrButton('limegreen')">
+<input type="button" value="" style="background-color:lightskyblue;border-style: none;" onclick=" changeclrButton('lightskyblue')">
+<input type="button" value="" style="background-color:gold;border-style: none;" onclick=" changeclrButton('gold')">
+<input type="button" value="" style="background-color:hotpink;border-style: none;" onclick=" changeclrButton('hotpink')">
+<input type="button" value="" style="background-color:saddlebrown;border-style: none;" onclick=" changeclrButton('saddlebrown')">
+<input type="button" value="" style="background-color:white;border-style: solid;" onclick=" changeclrButton('white')">
+<input type="button" value="" style="background-color:black;border-style: none;" onclick=" changeclrButton('black')">
+<input type="button" value="" style="background-color:darkorchid;border-style: none;" onclick=" changeclrButton('darkorchid')">
+<input size='5' id="niniiroButton" placeholder="color code">
+<input type="button" value="ok" style="background-color:grey; border-style: none;" onclick=" changeclrButton2()">
+
+<br><br>
+
+<b>How to use : &nbsp;&nbsp;&nbsp;</b>
+<button class="setting" onclick="Explain()"><img src="goto.png"  width="20" height="20"></img></button><br><br>
+<b>Update History : &nbsp;&nbsp;&nbsp;</b>
+<button class="setting" onclick="updaterireki()"><img src="goto.png"  width="20" height="20"></img></button>
+
+<br>
+</div>
+<div id="rireki" style="display:none;">
+<br>
+<font color="grey" size="2">
+<i>
+
+<b>Last Update: 2024/09/18</b><br>
+Add new device  Desktop (Windows/Mac/Chrome)<br><br>
+
+<b>Last Update: 2024/06/04</b><br>
+Change URL naver to linecorp<br><br>
+
+<b>Last Update: 2024/03/26</b><br>
+Add new category Android/iOS<br><br>
+
+<b>Last Update: 2024/03/25</b><br>
+Add service:LINE Music For Artists<br><br>
+
+<b>Last Update: 2022/9/20</b><br>
+Add service: DOSI Citizen<br><br>
+
+<b>Last Update: 2022/6/09</b><br>
+Add service: Dosi Brand Store<br><br>
+
+<b>Last Update: 2022/1/27</b><br>
+Add service: Dosi wallet<br><br>
+
+<b>Last Update: 2021/12/09</b><br>
+Add service: LINE Pay Japan<br><br>
+
+<b>Last Update: 2020/10/12</b><br>
+Add service: BITMAX Wallet<br><br>
+
+<b>Last Update: 2020/09/23</b><br>
+Add service: LINE blockchain Wallet<br><br>
+
+
+<b>Last Update: 2020/7/23</b><br>
+Device Auto-selected (Web, Windows: LAP TH/TW/JP, LINE STORE, Usersticker)<br>
+Delete unwanted devices: window phone, window10, WAP<br><br>
+<b>Last Update: 2020/6/18</b><br>
+LINE POINTS > LINE POINT CLUB
+
+<b>Last Update: 2020/4/21</b><br>
+Add services<br>
+- LAP Help Center TW<br>
+- LAP Help Center TH<br>
+<br>
+<b>Last Update: 2019/12/30</b><br>
+- <u>Reduce Service for Core-Translation</u><br>
+<b>Last Update: 2019/11/03</b><br>
+- <u>Add new colorplate</u><br>
+- <u>more round design</u><br>
+- <u>Add new services:</u><br>
+LINE SP Campaign<br>
+STEP<br>
+おでかけNOW<br>
+LINEチラシ<br>
+LINEカーナビ<br>
+LINE弁護士相談<br>
+LINE_Healthcare<br>
+CMS_LINE_Healthcare<br>
+LINK ME<br>
+
+<u>Rearranged service:</u>
+LINE Ads Platform<br>
+LINE TAXI<br>
+LINE LIST<br>
+T-Go!<br>
+4CAST<br>
+---------------------------<br>
+<b>Last Update: 2019/10/3</b><br>
+- <u>Device "WAP" Added</u><br>
+<b>Last Update: 2019/07/1</b><br>
+- <u>Changed services "LINE Ad Manager" to "LINE Ads Platform"</u><br>
+Last Update: 2019/06/17<br>
+- <u>Add new services "LINE Ad Manager"</u><br>
+Last Update: 2019/06/11<br>
+- <u>Add new services "SWAY"</u><br>
+Last Update: 2019/03/17<br>
+- <u>Add new services</u><br>
+ID Official Account	<br>
+TH Official Account<br>
+TW Official Account<br>
+JP Official Account<br>
+--------------------------<br>
+Last Update: 2019/02/22 <br>
+- Change iims login URL<br> (*can login to LAN directly without clicking "LAN")
+<br>
+--------------------------<br>
+Last Update: 2018/12/25<br>
+- <u>Add new services</u><br>
+LINEほけん<br>
+LINE家計簿<br>
+LINE TICKET<br>
+4CAST<br>
+LINE CONOMI<br>
+Pasha<br>
+LINE Business ID<br><br>
+<u>- Change service name</u><br>
+LINE Pay カード<br>
+T-Go!<br>
+LINEスマート投資<br>
+LINEトラベルjp<br>
+<u>- Sevice re-arrange</u><br>
+--------------------------<br>
+Last Update: 2018/09/29 <br>- Add "Country" at Help check/new color<br>
+--------------------------<br>
+Last Update: 2018/08/22 <br>- fixed BETA url<br>
+--------------------------<br>
+Last Update: 2018/08/15 <br>- Search word error fix (ClovaJP)<br>
+--------------------------<br>
+Last Update: 2018/07/28 - <br> <u>Add service</u> <br>Trivia Go<br>Charmmy<br>Talk CARE<br>LINE Novel<br>LINE Career<br>BITMAX(FTC)<br>LINE Invest<br>LINE Travel<br>Disney x LINE
+<br><u>Delete service</u><br>LINE SMART PARTY<br>LINE Gift<br>LINE Card (only BETA)<br>
+---------------------------<br>
+Last Update: 2018/06/21 <br>- Add button "+", "-" auto open<br>
+--------------------------<br>
+Last Update: 2018/05/13 <br>- Add "BITBOX (CTC)"<br>
+---------------------------<br>
+Last Update: 2018/04/16 <br>- Add "Foodie China"<br>
+---------------------------<br>
+Last Update: 2018/04/07 <br>- Add "Foodie"</i><br>
+
+
+</font>
+</div>
+
+</td>
+			<td width='95%' ><iframe id="helpiframe" src=""  style="width:98%;height:1200px;border:0;"></iframe></td>
+		</tr>
+	</tbody>
+</table>
+
+
+  
+
+</html>
