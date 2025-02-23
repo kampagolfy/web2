@@ -8,6 +8,7 @@
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid black; padding: 8px; text-align: left; }
         th { background-color: #f4f4f4; }
+        button { padding: 5px 10px; margin-left: 10px; cursor: pointer; }
     </style>
 </head>
 <body onload="getData()">
@@ -26,13 +27,14 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Message</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
 
     <script>
-        const sheetUrl = "https://script.google.com/macros/s/AKfycbzDSwuHx1A01AL5GavCMcKaP_Gwta59SkEw0pXFT-PrO0i7Z2QcAPnMLqA5kgk0-VkB/exec";
+        const sheetUrl = "https://script.google.com/macros/s/AKfycbwaSyWyD-AiF-EUY4Mp-nkNe_Mp369wEKw2Wb6stPYfhq1zXp0zGziHQ_eYrblsTrdW/exec";
 
         function postData() {
             const data = {
@@ -59,12 +61,27 @@
                     let tableBody = document.querySelector("#outputTable tbody");
                     tableBody.innerHTML = ""; // Clear old data
 
-                    data.forEach(row => {
+                    data.forEach((row, index) => {
                         let newRow = document.createElement("tr");
-                        newRow.innerHTML = `<td>${row[0]}</td><td>${row[1]}</td><td>${row[2].replace(/\\n/g, "<br>")}</td>`;
+                        newRow.innerHTML = `<td>${row[0]}</td><td>${row[1]}</td><td>${row[2].replace(/\\n/g, "<br>")}</td>
+                                            <td><button onclick="deleteEntry(${index})">Delete</button></td>`;
                         tableBody.appendChild(newRow);
                     });
                 });
+        }
+
+        function deleteEntry(index) {
+            const data = { index: index };
+            
+            fetch(sheetUrl, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ delete: true, index: index }) // send delete flag
+            }).then(() => {
+                alert("Entry deleted!");
+                getData(); // Refresh table after deletion
+            });
         }
     </script>
 
