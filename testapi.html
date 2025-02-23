@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets API</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body onload="getData()">
+
+    <h2>Submit Data to Google Sheets</h2>
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
+    <button onclick="postData()">Submit</button>
+
+    <h2>Stored Data</h2>
+    <button onclick="getData()">Load Data</button>
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const sheetUrl = "https://script.google.com/macros/s/AKfycbzDSwuHx1A01AL5GavCMcKaP_Gwta59SkEw0pXFT-PrO0i7Z2QcAPnMLqA5kgk0-VkB/exec";
+
+        function postData() {
+            const data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value.replace(/\n/g, "\\n") // Preserve newlines
+            };
+
+            fetch(sheetUrl, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            }).then(() => {
+                alert("Data sent!");
+                getData(); // Refresh table after submission
+            });
+        }
+
+        function getData() {
+            fetch(sheetUrl)
+                .then(response => response.json())
+                .then(data => {
+                    let tableBody = document.querySelector("#outputTable tbody");
+                    tableBody.innerHTML = ""; // Clear old data
+
+                    data.forEach(row => {
+                        let newRow = document.createElement("tr");
+                        newRow.innerHTML = `<td>${row[0]}</td><td>${row[1]}</td><td>${row[2].replace(/\\n/g, "<br>")}</td>`;
+                        tableBody.appendChild(newRow);
+                    });
+                });
+        }
+    </script>
+
+</body>
+</html>
