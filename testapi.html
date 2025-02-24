@@ -21,10 +21,28 @@
 <body onload="getData()">
 
     <h2>Submit Data to Google Sheets</h2>
-    <input type="text" id="name" placeholder="Date" class="set-margin"><br>
-    <input type="email" id="email" placeholder="Title" class="set-margin"><br>
-    <textarea id="message" placeholder="Message" class="set-margin"></textarea><br>
-    <button onclick="postData()">Submit</button>
+
+
+    <table cellpadding="1" cellspacing="1" style="width:500px; border: none;">
+        <tbody >
+            <tr style="border:none;">
+                <td style="border:none;"><input type="text" id="name" placeholder="Date" class="set-margin"><br>
+                    <input type="email" id="email" placeholder="Title" class="set-margin"><br>
+                    <textarea id="message" placeholder="Message" class="set-margin"></textarea><br>
+                    <button onclick="postData()">Submit</button>
+                    <button onclick="document.getElementById('html-right').innerHTML=document.getElementById('message').value">update html</button>
+                </td>
+                <td style="vertical-align: top;border:none;">
+
+                    <div id="html-right" contenteditable="true" style="height: 100px;width:200px; border:1px solid black;overflow: auto; resize: both;">rich text here</div>
+
+                <br><button onclick="document.getElementById('html-right').innerHTML=''">clear</button>
+                    <button onclick="document.getElementById('message').value=document.getElementById('html-right').innerHTML">update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
 
     <h2>Stored Data</h2>
     <button onclick="getData()">Load Data</button>
