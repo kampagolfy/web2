@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sheets API</title>
+    <link rel="icon" type="image/png" href="notes.png" />
+    <title>Golfy Memo</title>
     <style>
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left;width:10% }
         th { background-color: #f4f4f4; }
         button { padding: 5px 10px; margin-left: 10px; cursor: pointer; }
+        .set-margin {padding:1px;margin: 5px;}
+
+
+        
+
+
     </style>
 </head>
 <body onload="getData()">
 
     <h2>Submit Data to Google Sheets</h2>
-    <input type="text" id="name" placeholder="Name">
-    <input type="email" id="email" placeholder="Email">
-    <textarea id="message" placeholder="Message"></textarea>
+    <input type="text" id="name" placeholder="Date" class="set-margin"><br>
+    <input type="email" id="email" placeholder="Title" class="set-margin"><br>
+    <textarea id="message" placeholder="Message" class="set-margin"></textarea><br>
     <button onclick="postData()">Submit</button>
 
     <h2>Stored Data</h2>
@@ -24,8 +31,8 @@
     <table id="outputTable">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Email</th>
+                <th>Date</th>
+                <th>Title</th>
                 <th>Message</th>
                 <th>Actions</th>
             </tr>
@@ -68,6 +75,8 @@
                         tableBody.appendChild(newRow);
                     });
                 });
+
+                dateandtime();
         }
 
         function deleteEntry(index) {
@@ -83,6 +92,21 @@
                 getData(); // Refresh table after deletion
             });
         }
+
+        function dateandtime() {
+    const d = new Date();
+    const options = { 
+        weekday: 'short', 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit' 
+    };
+    const formattedDateTime = d.toLocaleString('en-US', options);
+    document.getElementById("name").value = formattedDateTime;
+}
     </script>
 
 </body>
